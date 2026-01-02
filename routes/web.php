@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\StudentsController;
+use App\Http\Controllers\TeachersController;
 use App\Http\Middleware\TeacherMiddleware;
 use Illuminate\Support\Facades\Route;
 
@@ -17,7 +18,10 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
-Route::prefix('user')->controller(StudentsController::class,)->middleware(TeacherMiddleware::class)->group(function(){
+Route::prefix('user')->controller(StudentsController::class,)->middleware('teacher')->group(function(){
 Route::get('/',[StudentsController::class, 'index']);
 });
-
+Route::prefix('/teacher')->controller(TeachersController::class)->group(function(){
+Route::get('/','index');
+Route::get('/{id}','show');
+});
