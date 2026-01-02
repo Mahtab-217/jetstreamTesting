@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\StudentsController;
+use App\Http\Middleware\TeacherMiddleware;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -15,3 +17,7 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+Route::prefix('user')->controller(StudentsController::class,)->middleware(TeacherMiddleware::class)->group(function(){
+Route::get('/',[StudentsController::class, 'index']);
+});
+
