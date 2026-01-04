@@ -10,7 +10,9 @@
 <body>
     <div class="9/12 border mx-auto "></div>
     <h1 class="text-4xl text-center ">Edit Studetns</h1>
-    <form action="" class="flex gap-4 w-full p-4 flex-col mx-auto">
+    <form action="{{ URL('') }}" class="flex gap-4 w-9/12 p-4 flex-col mx-auto">
+        @csrf
+        @method('put')
         <input value="{{$student->name}}" type="text" class="py-2 px-5 border focus:outline-none" name="name">
         <input value="{{$student->LastName}}" type="text" class="py-2 px-5 border focus:outline-none" name="lastName">
         <input value="{{$student->user_id}}" type="submit" value="Edit" class="py-2 px-6 bg-blue-700 text-white">
