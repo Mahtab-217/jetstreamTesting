@@ -20,11 +20,11 @@
         </tr>
         @foreach ($students as $st)
         <tr>
-            <td class="border " >{{$st->id}}</td>
-            <td class="border ">{{$st->name}}</td>
-            <td class="border ">{{$st->lastName}}</td>
-            <td class="border ">{{$st->user_id}}</td>
-            <td class="border "><a href="URL()">Edit</a></td>
+            <td class="border py-1 px-2" >{{$st->id}}</td>
+            <td class="border py-1 px-2">{{$st->name}}</td>
+            <td class="border py-1 px-2">{{$st->lastName}}</td>
+            <td class="border py-1 px-2">{{$st->user_id}}</td>
+            <td class="border py-1 px-2"><a href="{{ URL('student/edit', $st->id)}}">Edit</a></td>
         </tr>
             
         @endforeach
