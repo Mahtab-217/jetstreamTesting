@@ -25,3 +25,6 @@ Route::prefix('/teacher')->controller(TeachersController::class)->group(function
 Route::get('/','index');
 Route::get('/{id}','show');
 });
+Route::prefix('student')->controller(StudentsController::class)->group(function(){
+    Route::get('/','index');
+});
