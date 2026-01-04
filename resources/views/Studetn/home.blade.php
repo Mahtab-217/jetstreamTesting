@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
-    <div class="w-11/12 mx-auto my-4"></div>
-    <h1>All Students</h1>
-    <table class="border border-collapse">
+    <div class="w-11/12 mx-auto my-2">
+    <h1 class="font-bold text-4xl text-center">All Students</h1>
+    <table class="border border-collapse w-full">
         <tr>
             <th class="py-2 px-4 border">ID</th>
             <th class="py-2 px-4 border">name</th>
@@ -17,6 +18,17 @@
             <th class="py-2 px-4 border">User Id</th>
             <th class="py-2 px-4 border">Edit/Uptade</th>
         </tr>
+        @foreach ($students as $st)
+        <tr>
+            <td class="border " >{{$st->id}}</td>
+            <td class="border ">{{$st->name}}</td>
+            <td class="border ">{{$st->lastName}}</td>
+            <td class="border ">{{$st->user_id}}</td>
+            <td class="border "><a href="URL()">Edit</a></td>
+        </tr>
+            
+        @endforeach
     </table>
+    </div>
 </body>
 </html>

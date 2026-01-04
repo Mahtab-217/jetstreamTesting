@@ -9,8 +9,8 @@ use Illuminate\Http\Request;
 class StudentsController extends Controller
 {
     //
-    public function index($id){
-        $students= students::findorFail($id);
-        return $students;
+    public function index(){
+        $students= students::all();
+        return view('Studetn.home')->with('students', $students);
     }
 }
