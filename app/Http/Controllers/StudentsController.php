@@ -21,7 +21,7 @@ class StudentsController extends Controller
     public function update(Request $request, $id){
       $student=  students::findOrFail($id);
       $student->name=$request->name;
-      $student->name=$request->lastName;
+      $student->lastName=$request->lastName;
       $student->update();
       return redirect('student');
     }

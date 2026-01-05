@@ -14,7 +14,7 @@
         @csrf
         @method('put')
         <input value="{{$student->name}}" type="text" class="py-2 px-5 border focus:outline-none" name="name">
-        <input value="{{$student->LastName}}" type="text" class="py-2 px-5 border focus:outline-none" name="lastName">
+        <input value="{{$student->lastName}}" type="text" class="py-2 px-5 border focus:outline-none" name="lastName">
         <input  type="submit" value="Update" class="py-2 px-6 bg-blue-700 text-white">
     </form>
 </body>
