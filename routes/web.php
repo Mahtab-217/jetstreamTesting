@@ -28,4 +28,5 @@ Route::get('/{id}','show');
 Route::prefix('student')->controller(StudentsController::class)->group(function(){
     Route::get('/','index');
     Route::get('/edit/{id}','edit');
+    Route::put('/update/{id}','update');
 });

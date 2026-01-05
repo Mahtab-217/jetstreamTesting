@@ -14,11 +14,12 @@ class StudentsController extends Controller
         return view('Studetn.home')->with('students', $students);
     }
     public function edit($id){
- $student=   students::findOrFail($id);
- return view('Studetn.edit', compact('student'));
+    $student=students::findOrFail($id);
+    // return $student;
+ return view('Studetn.edit')->with('student',$student);
     }
-    public function update(Request $request,$id){
-      $student=  students::findOrFail($id)->get();
+    public function update(Request $request, $id){
+      $student=  students::findOrFail($id);
       $student->name=$request->name;
       $student->name=$request->lastName;
       $student->update();
