@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\StudentsController;
 use App\Http\Controllers\TeachersController;
+use App\Http\Middleware\StudentMiddleWare;
 use App\Http\Middleware\TeacherMiddleware;
 use Illuminate\Support\Facades\Route;
 
@@ -25,7 +26,7 @@ Route::prefix('/teacher')->controller(TeachersController::class)->group(function
 Route::get('/','index');
 Route::get('/{id}','show');
 });
-Route::prefix('student')->controller(StudentsController::class)->group(function(){
+Route::prefix('student')->controller(StudentsController::class)->middleware(StudentMiddleWare::class)->group(function(){
     Route::get('/','index');
     Route::get('/edit/{id}','edit');
     Route::put('/update/{id}','update');
