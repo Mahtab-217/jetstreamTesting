@@ -27,7 +27,10 @@
               <form action="{{URL('student/delete',$st) }}" method="POST">
             @csrf
             @method('delete')
-            <input type="submit" value="Delete" class="bg-red-600 rounded-sm py-2 px-1.5">
+            {{-- @can('delete',$st) --}}
+              <input type="submit" value="Delete" class="bg-red-600 rounded-sm py-2 px-1.5">
+            {{-- @endcan --}}
+   
            </form>
             @can('edit-student',$st)
                  <td class="border py-1 px-2"><a href="{{ URL('student/edit', $st->id)}}">Edit</a></td>

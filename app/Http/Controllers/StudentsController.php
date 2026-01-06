@@ -29,7 +29,7 @@ class StudentsController extends Controller
       return redirect('student');
     }
     public function delete($id){
-      $student=students::findOrFail('$id');
+      $student=students::findOrFail($id);
       Gate::authorize('delete',$student);
       $student->delete();
       return redirect('/student');
