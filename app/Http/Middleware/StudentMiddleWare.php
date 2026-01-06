@@ -19,7 +19,7 @@ class StudentMiddleWare
     public function handle(Request $request, Closure $next): Response
     {
         $users=FacadesAuth::user();
-        if($users->user_type !=="student"){
+        if($users->user_type !=="student"|| $users->id !== "teacher"){
         return redirect('/');
         }
         return $next($request);
