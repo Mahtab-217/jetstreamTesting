@@ -23,11 +23,11 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         //
-        Gate::define('edit-student',function(User $user, students $student){
-        return $user->id===$student->user_id;
-        });
-        Gate::define('delete',function(User $user, students $student){
-      return $user->id===$student->user_id;
-        });
+    //     Gate::define('edit-student',function(User $user, students $student){
+    //     return $user->id===$student->user_id;
+    //     });
+    //     Gate::define('delete',function(User $user, students $student){
+    //   return $user->id===$student->user_id;
+    //     });
     }
 }

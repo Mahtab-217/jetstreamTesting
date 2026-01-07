@@ -22,7 +22,7 @@ class StudentsController extends Controller
     }
     public function update(Request $request, $id){
       $student=  students::findOrFail($id);
-      Gate::authorize('edit-student',$student);
+      Gate::authorize('update',$student);
       $student->name=$request->name;
       $student->lastName=$request->lastName;
       $student->update();

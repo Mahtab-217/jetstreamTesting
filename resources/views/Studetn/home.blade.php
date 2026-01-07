@@ -10,7 +10,7 @@
 <body>
     <div class="w-11/12 mx-auto my-2">
     <h1 class="font-bold text-4xl text-center">All Students</h1>
-    <table class="border border-collapse w-full">
+    <table class="border border-collapse w-full mx-auto my-4">
         <tr>
             <th class="py-2 px-4 border">ID</th>
             <th class="py-2 px-4 border">name</th>
