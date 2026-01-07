@@ -16,7 +16,7 @@ class StudentsController extends Controller
     }
     public function edit($id){
     $student=students::findOrFail($id);
-    Gate::authorize('edit-student',$student);
+    Gate::authorize('update',$student);
     // return $student;
  return view('Studetn.edit')->with('student',$student);
     }

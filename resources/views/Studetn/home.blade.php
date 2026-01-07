@@ -24,7 +24,11 @@
             <td class="border py-1 px-2">{{$st->name}}</td>
             <td class="border py-1 px-2">{{$st->lastName}}</td>
             <td class="border py-1 px-2">{{$st->user_id}}</td>
-              <form action="{{URL('student/delete',$st) }}" method="POST">
+           
+            @can('update',$st)
+                 <td class="border py-1 px-2"><a href="{{ URL('student/edit', $st->id)}}">Edit</a></td>
+            @endcan
+               <form action="{{URL('student/delete',$st) }}" method="POST">
             @csrf
             @method('delete')
             {{-- @can('delete',$st) --}}
@@ -32,9 +36,6 @@
             {{-- @endcan --}}
    
            </form>
-            @can('edit-student',$st)
-                 <td class="border py-1 px-2"><a href="{{ URL('student/edit', $st->id)}}">Edit</a></td>
-            @endcan
          
         </tr>
             
