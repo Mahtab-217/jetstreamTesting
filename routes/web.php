@@ -33,3 +33,4 @@ Route::prefix('student')->controller(StudentsController::class)->middleware('aut
     Route::delete('/delete/{id}','delete');
 });
 Route::view('sample','Sample');
+Route::view('sample2','sample2');

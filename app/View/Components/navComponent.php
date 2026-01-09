@@ -11,9 +11,13 @@ class navComponent extends Component
     /**
      * Create a new component instance.
      */
-    public function __construct()
+    public $className;
+    public $text;
+    public function __construct($className,$text)
     {
         //
+        $this->className=$className;
+        $this->text=$text;
     }
 
     /**
