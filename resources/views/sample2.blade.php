@@ -8,8 +8,8 @@
      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
-    <div class="w-full h-screen bg-gray-400 p-12 ">
-        <x-nav-component/>
+    <div class="w-full h-screen bg-gray-300 p-12 ">
+       <x-nav-component/>
     </div>
 </body>
 </html>
