@@ -26,7 +26,7 @@ Route::prefix('/teacher')->controller(TeachersController::class)->group(function
 Route::get('/','index');
 Route::get('/{id}','show');
 });
-Route::prefix('student')->controller(StudentsController::class)->middleware(StudentMiddleWare::class)->group(function(){
+Route::prefix('student')->controller(StudentsController::class)->middleware('auth')->group(function(){
     Route::get('/','index');
     Route::get('/edit/{id}','edit');
     Route::put('/update/{id}','update');
