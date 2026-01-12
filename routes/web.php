@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\SampleController;
 use App\Http\Controllers\StudentsController;
 use App\Http\Controllers\TeachersController;
 use App\Http\Middleware\StudentMiddleWare;
@@ -36,3 +37,4 @@ Route::prefix('student')->controller(StudentsController::class)->middleware('aut
 Route::view('sample','Sample');
 Route::view('sample2','sample2');
 Route::get('/post',[ PostController::class], 'addData');
+Route::get('sample3',[SampleController::class,'index']);
