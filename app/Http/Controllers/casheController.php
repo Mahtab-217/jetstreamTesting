@@ -2,17 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\WelcomeMail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Mail;
 
 class casheController extends Controller
 {
     //
     public function index(){
-        Cache::put('month',' jan paid',120);
-        $value =Cache::get('month');
-        Cache::forget('month');
-       $value2= Cache::get('abc',' this one is undefined');
-        return "something".$value. $value2;
+       Mail::to("mahtabnasiri1289@gamil.com")->send(new WelcomeMail());
+        return "The eamil has been sent successfully";
     }
 }
