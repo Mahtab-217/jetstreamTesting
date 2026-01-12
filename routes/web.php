@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\casheController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\SampleController;
 use App\Http\Controllers\StudentsController;
@@ -38,3 +39,4 @@ Route::view('sample','Sample');
 Route::view('sample2','sample2');
 Route::get('/post',[ PostController::class], 'addData');
 Route::get('sample3',[SampleController::class,'index']);
+Route::get('cache',[casheController::class,'index']);

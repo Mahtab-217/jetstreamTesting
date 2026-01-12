@@ -26,6 +26,7 @@ class StudentsController extends Controller
       $student->name=$request->name;
       $student->lastName=$request->lastName;
       $student->update();
+      session()->flash("message","Your data has been updated");
       return redirect('student');
     }
     public function delete($id){
