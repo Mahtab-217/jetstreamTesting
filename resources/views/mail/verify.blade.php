@@ -9,14 +9,14 @@
 </head>
 <body>
     <div class="w-full h-screen bg-stone-300 flex justify-center items-center ">
-        <p class="text-center font-bold">
-            سلام استفاده کننده عزیز خوش آمدید. ایمیل ادرس تان را وارد نمایید
+        <p class="text-center font-serif text-black font-bold">
+            سلام استفاده کننده عزیز! خوش آمدید. ایمیل آدرس تان را تایید نمایید
         </p>
-        <a class="bg-green-600 border rounded-md py-2 px-1.5 " href="">
+        <a class="bg-green-600 border bg-shadow-green-500  rounded-md py-2 px-1.5 " href="">
             تایید ایمیل آدرس
         </a>
-        <p class="text-center font-bold ">
-            اگر این ایمیل متعلق به شمما نیست این ایمیل را نادیده بگیرید
+        <p class="text-center font-bold text-black font-serif">
+            اگر این ایمیل متعلق به شما نیست این ایمیل را نادیده بگیرید
         </p>
     </div>
 </body>
