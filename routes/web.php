@@ -7,6 +7,8 @@ use App\Http\Controllers\StudentsController;
 use App\Http\Controllers\TeachersController;
 use App\Http\Middleware\StudentMiddleWare;
 use App\Http\Middleware\TeacherMiddleware;
+use Illuminate\Container\Attributes\Auth;
+use Illuminate\Support\Facades\Auth as FacadesAuth;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -39,5 +41,5 @@ Route::view('sample','Sample');
 Route::view('sample2','sample2');
 Route::get('/post',[ PostController::class], 'addData');
 Route::get('sample3',[SampleController::class,'index']);
-Route::get('cache',[casheController::class,'index']);
+Route::get('cache',[casheController::class,'index'])->middleware(StudentMiddleWare::class);
 
