@@ -40,3 +40,4 @@ Route::view('sample2','sample2');
 Route::get('/post',[ PostController::class], 'addData');
 Route::get('sample3',[SampleController::class,'index']);
 Route::get('cache',[casheController::class,'index']);
+

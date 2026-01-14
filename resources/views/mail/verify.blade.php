@@ -8,11 +8,11 @@
        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
-    <div class="w-full h-screen bg-stone-300 flex justify-center items-center ">
+    <div class="w-full h-screen my-4  bg-stone-300 flex justify-center items-center ">
         <p class="text-center font-serif text-black font-bold">
             سلام استفاده کننده عزیز! خوش آمدید. ایمیل آدرس تان را تایید نمایید
         </p>
-        <a class="bg-green-600 border bg-shadow-green-500  rounded-md py-2 px-1.5 " href="">
+        <a class="bg-green-600 border bg-shadow-green-500  rounded-md py-2 w-fit px-1.5 " href="{{ $url }}">
             تایید ایمیل آدرس
         </a>
         <p class="text-center font-bold text-black font-serif">
